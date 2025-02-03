@@ -1,5 +1,5 @@
 diff --git a/tmux.h b/tmux.h
-index 53084b8b..fc83de21 100644
+index 071d9d29..0ff33cd3 100644
 --- a/tmux.h
 +++ b/tmux.h
 @@ -19,6 +19,7 @@
@@ -10,16 +10,14 @@ index 53084b8b..fc83de21 100644
  #include <sys/time.h>
  #include <sys/uio.h>
  
-@@ -26,6 +27,8 @@
- #include <stdarg.h>
- #include <stdio.h>
- #include <termios.h>
+@@ -31,12 +32,18 @@
+ #ifdef HAVE_UTEMPTER
+ #include <utempter.h>
+ #endif
 +#include <stdlib.h>
 +#undef environ
  
- #ifdef HAVE_UTEMPTER
- #include <utempter.h>
-@@ -35,7 +38,11 @@
+ #include "compat.h"
  #include "tmux-protocol.h"
  #include "xmalloc.h"
  
