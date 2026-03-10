@@ -1,5 +1,5 @@
 # Update bump details accordingly. Use bump check to confirm.
-# bump: tmux-version /TMUX_VERSION="(.*)"/ fetch:https://github.com/tmux/tmux/releases/|re:/tag.([\d.]+a?)"/|sort
+# bump: tmux-version /TMUX_VERSION="(.*)"/ https://github.com/tmux/tmux|re:#href=".*?releases/tag/([\d.]+[a-z]?)"#$1#
 TMUX_VERSION="3.6a" # Specify a stable release
 export ZOPEN_STABLE_URL="https://github.com/tmux/tmux.git"
 export ZOPEN_STABLE_TAG="$TMUX_VERSION"
